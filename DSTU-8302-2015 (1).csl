@@ -227,6 +227,7 @@
           </group>
         </else>
       </choose>
+     <text variable="DOI" prefix=". doi: " text-case="lowercase"/>
     </layout>
   </bibliography>
 </style>
