@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:style xmlns:ns0="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0.2" default-locale="uk-UA" citation-format="numeric">
+  
+  <ns0:info>
+    <ns0:title>DSTU 8302-2015</ns0:title>
+    <ns0:id>http://www.zotero.org/styles/dstu-8302-2015</ns0:id>
+    <ns0:link href="http://www.zotero.org/styles/dstu-8302-2015-drradger" rel="self" />
+    <ns0:author>
+      <ns0:name>Mykhailo Shevchuk</ns0:name>
+      <ns0:email>mail@mshevchuk.com</ns0:email>
+      <ns0:uri>https://github.com/myshevchuk/dstu-csl</ns0:uri>
+    </ns0:author>
+    <ns0:category citation-format="numeric" />
+    <ns0:category field="generic-base" />
+    <ns0:summary>Citation style according to new DSTU 8302-2015 requirements.</ns0:summary>
+    <ns0:updated>2017-12-10T10:13:36+00:00</ns0:updated>
+    <ns0:rights>This work is licensed under a Creative Commons Attribution-Share Alike 4.0 License: http://creativecommons.org/licenses/by-sa/4.0/</ns0:rights>
+  <ns0:title>DSTU 8302:2015 (with DOI)</ns0:title><ns0:id>http://www.zotero.org/styles/dstu-8302-2015-with-doi</ns0:id><ns0:updated>2025-08-10T12:33:11Z</ns0:updated><ns0:title>DSTU-8302-2015-DrRadger</ns0:title><ns0:title-short>DSTU-DrRadger</ns0:title-short><ns0:id>http://www.zotero.org/styles/dstu-8302-2015-drradger</ns0:id><ns0:updated>2025-08-10T12:36:32Z</ns0:updated></ns0:info>
+  <ns0:locale>
+    <ns0:terms>
+      <ns0:term name="editor">ред. </ns0:term>
+      <ns0:term name="et-al"> та ін.</ns0:term>
+      <ns0:term name="page" form="short">
+        <ns0:single>С. </ns0:single>
+        <ns0:multiple>С. </ns0:multiple>
+      </ns0:term>
+      <ns0:term name="number-of-pages">
+        <ns0:single> с.</ns0:single>
+        <ns0:multiple> с.</ns0:multiple>
+      </ns0:term>
+      <ns0:term name="volume" form="short">Вип. </ns0:term>
+      <ns0:term name="issue" form="short">№ </ns0:term>
+      <ns0:term name="editor" form="short">
+        <ns0:single>Ред. </ns0:single>
+        <ns0:multiple>Ред. </ns0:multiple>
+      </ns0:term>
+      <ns0:term name="translator" form="short">
+        <ns0:single>Пер. </ns0:single>
+        <ns0:multiple>Пер. </ns0:multiple>
+      </ns0:term>
+      <ns0:term name="editortranslator" form="short">
+        <ns0:single>Ред. і пер.</ns0:single>
+        <ns0:multiple>Ред. і пер. </ns0:multiple>
+      </ns0:term>
+    </ns0:terms>
+  </ns0:locale>
+  <ns0:macro name="author-all">
+    <ns0:names variable="author reviewed-author" delimiter=", ">
+      <ns0:name initialize-with=". " name-as-sort-order="all" sort-separator=" " />
+      <ns0:et-al term="et-al" />
+      <ns0:substitute>
+        <ns0:names variable="editor">
+          <ns0:name initialize-with=". " et-al-min="5" et-al-use-first="3" prefix="ed. " />
+          <ns0:et-al term="et-al" />
+        </ns0:names>
+      </ns0:substitute>
+    </ns0:names>
+  </ns0:macro>
+  <ns0:macro name="translator">
+    <ns0:names variable="translator">
+          <ns0:name name-as-sort-order="all" sort-separator=" " initialize-with=". " et-al-min="5" et-al-use-first="3" />
+      <ns0:et-al term="et-al" />
+    </ns0:names>
+  </ns0:macro>
+  <ns0:macro name="editor">
+    <ns0:names variable="editor">
+      <ns0:name name-as-sort-order="all" sort-separator=" " initialize-with=". " et-al-min="5" et-al-use-first="3" delimiter-precedes-last="never" />
+      <ns0:et-al term="et-al" />
+    </ns0:names>
+  </ns0:macro>
+  <ns0:macro name="section-title">
+    <ns0:text variable="title" />
+  </ns0:macro>
+  <ns0:macro name="container-title">
+    <ns0:text variable="container-title" font-style="italic" />
+  </ns0:macro>
+  <ns0:macro name="publisher">
+    <ns0:group delimiter=":">
+      <ns0:text variable="publisher-place" />
+      <ns0:group delimiter=", ">
+        <ns0:text variable="publisher" />
+        <ns0:text macro="year" />
+      </ns0:group>
+    </ns0:group>
+  </ns0:macro>
+  <ns0:macro name="year">
+    <ns0:date variable="issued">
+      <ns0:date-part name="year" range-delimiter=". " />
+    </ns0:date>
+  </ns0:macro>
+  <ns0:macro name="valid-since">
+    <ns0:date variable="issued" delimiter="-" prefix="[Чинний від " suffix="]">
+      <ns0:date-part name="year" form="long" />
+      <ns0:date-part name="month" form="numeric-leading-zeros" />
+      <ns0:date-part name="day" form="numeric-leading-zeros" />
+    </ns0:date>
+  </ns0:macro>
+  <ns0:macro name="volume">
+    <ns0:label variable="volume" form="short" />
+    <ns0:text variable="volume" />
+  </ns0:macro>
+  <ns0:macro name="issue">
+    <ns0:label variable="issue" form="short" />
+    <ns0:text variable="issue" />
+  </ns0:macro>
+  <ns0:macro name="page">
+    <ns0:label variable="page" form="short" />
+    <ns0:text variable="page" />
+  </ns0:macro>
+  <ns0:macro name="number-of-pages">
+    <ns0:text variable="number-of-pages" />
+    <ns0:label variable="number-of-pages" />
+  </ns0:macro>
+  <ns0:citation collapse="citation-number">
+    <ns0:sort>
+      <ns0:key variable="citation-number" />
+    </ns0:sort>
+    <ns0:layout prefix="[" suffix="]" delimiter=", ">
+      <ns0:text variable="citation-number" />
+    </ns0:layout>
+  </ns0:citation>
+  <ns0:bibliography hanging-indent="true" second-field-align="margin">
+    <ns0:sort>
+      <ns0:key variable="citation-number" />
+    </ns0:sort>
+    <ns0:layout suffix=".">
+      <ns0:text variable="citation-number" suffix=". " />
+      <ns0:choose>
+        <ns0:if type="article-journal">
+          <ns0:text macro="author-all" suffix=". " />
+          <ns0:text macro="section-title" suffix=". " />
+          <ns0:group delimiter=". ">
+            <ns0:text macro="container-title" />
+            <ns0:text macro="year" />
+            <ns0:group delimiter=", ">
+              <ns0:text macro="volume" />
+              <ns0:text macro="issue" />
+            </ns0:group>
+            <ns0:text macro="page" />
+          </ns0:group>
+        </ns0:if>
+        <ns0:else-if type="book">
+          <ns0:text macro="author-all" suffix=" " />
+          <ns0:text macro="section-title" suffix=". " />
+          <ns0:group delimiter=". ">
+            <ns0:group delimiter=" ; ">
+              <ns0:text macro="editor" />
+              <ns0:text macro="translator" />
+            </ns0:group>
+            <ns0:group delimiter=":">
+              <ns0:text variable="publisher-place" />
+              <ns0:group delimiter=", ">
+                <ns0:text variable="publisher" />
+                <ns0:text macro="year" />
+              </ns0:group>
+            </ns0:group>
+            <ns0:text macro="number-of-pages" />
+            <ns0:text variable="ISBN" prefix="ISBN " />
+          </ns0:group>
+        </ns0:else-if>
+        <ns0:else-if type="chapter">
+          <ns0:text macro="author-all" suffix=". " />
+          <ns0:text macro="section-title" suffix=". " />
+          <ns0:group delimiter=". ">
+            <ns0:group delimiter=". ">
+              <ns0:text macro="container-title" />
+              <ns0:text macro="editor" />
+              <ns0:text macro="translator" />
+            </ns0:group>
+            <ns0:text macro="publisher" />
+            <ns0:text macro="page" />
+          </ns0:group>
+        </ns0:else-if>
+        <ns0:else-if type="patent">
+          <ns0:text macro="author-all" suffix="; " />
+          <ns0:text variable="number" prefix="Pat. " suffix=" " />
+          <ns0:text variable="publisher-place" suffix=", " />
+          <ns0:text variable="container-title" prefix="IPC " suffix=". " />
+          <ns0:text macro="section-title" suffix=", " />
+          <ns0:text variable="publisher" prefix="assignee " suffix=". — " />
+          <ns0:text variable="chapter-number" prefix="No. " suffix=" ; " />
+          <ns0:text variable="edition" prefix="priority date " suffix=" ; " />
+          <ns0:date variable="issued" prefix="assigned ">
+            <ns0:date-part name="day" form="numeric-leading-zeros" suffix="." />
+            <ns0:date-part name="month" form="numeric-leading-zeros" suffix="." />
+            <ns0:date-part name="year" form="short" />
+          </ns0:date>
+        </ns0:else-if>
+        <ns0:else-if type="legislation">
+            <ns0:group delimiter=". — ">
+            <ns0:group delimiter=" : ">
+              <ns0:text macro="section-title" />
+              <ns0:group delimiter=" ">
+                <ns0:text variable="volume" />
+                <ns0:text variable="number" />
+              </ns0:group>
+            </ns0:group>
+            <ns0:text macro="valid-since" />
+            <ns0:group delimiter=", ">
+              <ns0:group delimiter=" : ">
+                <ns0:text variable="section" />
+                <ns0:text variable="chapter-number" />
+              </ns0:group>
+              <ns0:text variable="references" />
+            </ns0:group>
+            <ns0:text variable="page" suffix=" с." />
+            <ns0:text variable="container-title" prefix="(" suffix=")" />
+          </ns0:group>
+        </ns0:else-if>
+        <ns0:else>
+          <ns0:text macro="author-all" suffix=" " />
+          <ns0:text macro="section-title" suffix=". " />
+          <ns0:group delimiter=". ">
+            <ns0:group delimiter="; ">
+              <ns0:text macro="editor" />
+              <ns0:text macro="translator" />
+            </ns0:group>
+            <ns0:group delimiter=":">
+              <ns0:text variable="publisher-place" />
+              <ns0:group delimiter=", ">
+                <ns0:text variable="publisher" />
+                <ns0:text macro="year" />
+              </ns0:group>
+            </ns0:group>
+            <ns0:text macro="number-of-pages" />
+            <ns0:text variable="ISBN" prefix="ISBN " />
+          </ns0:group>
+        </ns0:else>
+      </ns0:choose>
+    <ns0:group delimiter=""><ns0:text macro="doi" prefix="." /></ns0:group></ns0:layout>
+  </ns0:bibliography>
+<ns0:macro name="doi"><ns0:group><ns0:text variable="DOI" prefix=" doi: " text-case="lowercase" /></ns0:group></ns0:macro></ns0:style>
